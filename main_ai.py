@@ -64,20 +64,22 @@ def main():
         st.markdown("DEBUG answer:")
         st.markdown(suggestion_answer)
         st.markdown("--------------------------------")
+        if suggestion_answer[0] != '[':
+            st.markdown("Please Submit again.")
+        else : 
+            sd = json.loads(suggestion_answer)
         
-        sd = json.loads(suggestion_answer)
-        
-        if check or your_option == prompt2:
-            original_answer = sd[0]
-            st.markdown(original_answer)
-            st.markdown("10 interesting vocabularies")
-            sd = sd[1]
-        
+            if check or your_option == prompt2:
+                original_answer = sd[0]
+                st.markdown(original_answer)
+                st.markdown("10 interesting vocabularies")
+                sd = sd[1]
+            
 
-        print (sd)
-        suggestion_df = pd.DataFrame.from_dict(sd)
-        print(suggestion_df)
-        st.table(suggestion_df)
+            print (sd)
+            suggestion_df = pd.DataFrame.from_dict(sd)
+            print(suggestion_df)
+            st.table(suggestion_df)
 
 if __name__ == "__main__":
     main()

@@ -25,6 +25,7 @@ prompt2 = """Act as an AI writing analizer in English. You will receive a
             - "comment" - a comment about the suggestion
             Don't say anything at first. Wait for the user to say something.
         """ 
+
 prompt3 = """Act as an AI writing translater, and translate text to {}.
             You must output 2 type of answer.
             1. You will translate the whole writing and output it as String 
