@@ -61,7 +61,7 @@ def main():
             {'role': 'user', 'content': user_input},
         ]
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            engine="text-davinci-002",
             messages=messages_so_far
         )
         # Show the response from the AI in a box
