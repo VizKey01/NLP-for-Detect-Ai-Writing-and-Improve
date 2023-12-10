@@ -45,7 +45,6 @@ def main():
     elif your_option == 'Auto-Corrector': your_option = prompt4
     elif your_option == 'Summarizer': your_option = prompt5
     
-    # Use the openai module directly, not OpenAI class
     openai.api_key = my_api_key
     
     if st.button('Submit') and my_api_key:
