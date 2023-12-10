@@ -64,7 +64,7 @@ def main():
         st.markdown("DEBUG answer:")
         st.markdown(suggestion_answer)
         st.markdown("--------------------------------")
-
+        
         sd = json.loads(suggestion_answer)
         
         if check or your_option == prompt2:
