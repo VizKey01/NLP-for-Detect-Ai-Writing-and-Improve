@@ -31,6 +31,7 @@ def main():
     st.write('You selected:', your_option)
 
     #Function Selected
+    check = False
     if your_option == 'pnan': your_option = prompt1
     elif your_option == 'Rewriter': your_option = prompt2
     elif your_option == 'Translator': 
@@ -40,6 +41,7 @@ def main():
             index=None,
             placeholder="Select language...",
         )
+        check = True
         st.write('You selected:', lang_option)
         your_option = prompt3.format(lang_option)
     elif your_option == 'Auto-Corrector': your_option = prompt4
@@ -64,7 +66,7 @@ def main():
         st.markdown("--------------------------------")
 
         
-        if your_option == 'Translater' or your_option == 'Rewriter':
+        if check or your_option == prompt2:
             st.markdown(suggestion_answer[0])
             st.markdown("10 interesting vocabularies")
             suggestion_answer = suggestion_answer[1]
