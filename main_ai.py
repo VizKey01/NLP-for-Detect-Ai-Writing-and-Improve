@@ -68,7 +68,8 @@ def main():
         sd = json.loads(suggestion_answer)
         
         if check or your_option == prompt2:
-            st.markdown(sd[0])
+            original_answer = sd[0]
+            st.markdown(original_answer)
             st.markdown("10 interesting vocabularies")
             sd = sd[1]
         
