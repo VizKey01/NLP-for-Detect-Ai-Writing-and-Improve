@@ -60,10 +60,14 @@ def main():
             {"role": "system", "content": your_option},
             {'role': 'user', 'content': user_input},
         ]
-        response = client.chat.completions.create(
-            engine="text-davinci-002",
-            messages=messages_so_far
+        engine = "text-davinci-002"
+
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=messages_so_far,
+            engine=engine
         )
+
         # Show the response from the AI in a box
         st.markdown('**AI response:**')
         suggestion_answer = response.choices[0].message.content
