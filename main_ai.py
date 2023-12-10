@@ -23,7 +23,6 @@ def init():
 
 def main():
     init()
-    st.header('AI Text Analyzer 🤖')
     st.markdown('Input the writing that you want to check.')
 
     # Set up key
