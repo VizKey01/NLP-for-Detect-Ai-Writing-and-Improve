@@ -18,6 +18,7 @@ Run if your pip version is not yet current.
 You can see the instructions to set environment variables [here for Linux](https://phoenixnap.com/kb/linux-set-environment-variable), [here for Windows](https://phoenixnap.com/kb/windows-set-environment-variable), and [here for Mac](https://phoenixnap.com/kb/set-environment-variable-mac).
 
 ## How to run
+* Run ```streamlit run app.py ``` on local.
 
 * Run `streamlit run app.py` on local.
 
