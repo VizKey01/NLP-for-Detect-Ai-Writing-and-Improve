@@ -64,10 +64,10 @@ def main():
         st.markdown("--------------------------------")
 
         
-        # if your_option == 'Translater':
-        #     st.markdown(sd[0])
-        #     st.markdown("10 interesting vocabularies")
-        #     sd = sd[1]
+        if your_option == 'Translater' or your_option == 'Rewriter':
+            st.markdown(suggestion_answer[0])
+            st.markdown("10 interesting vocabularies")
+            suggestion_answer = suggestion_answer[1]
         
 
         sd = json.loads(suggestion_answer)
