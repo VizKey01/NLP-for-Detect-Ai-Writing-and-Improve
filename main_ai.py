@@ -12,9 +12,11 @@ from Prompts_text import prompt1, prompt2, prompt3, prompt4, prompt5
 def init():
     # Set up the streamlit app
     st.set_page_config(
-        page_title='AI Text Analyzer',
-        page_icon= '🤖'
+        page_title='AI Text Analyzer 🤖',
+        page_icon='📝',
+        layout='wide'
     )
+    st.title('AI Text Analyzer 🤖')
 
 # def analyze_and_rewrite(api_key, user_input):
 
