@@ -16,7 +16,7 @@ def init():
         page_icon='📝',
         layout='wide'
     )
-    st.title('AI Text Analyzer 🤖')
+    # st.title('AI Text Analyzer 🤖')
 
 # def analyze_and_rewrite(api_key, user_input):
 
