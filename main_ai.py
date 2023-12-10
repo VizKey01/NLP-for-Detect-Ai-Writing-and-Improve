@@ -65,14 +65,14 @@ def main():
         st.markdown(suggestion_answer)
         st.markdown("--------------------------------")
 
+        sd = json.loads(suggestion_answer)
         
         if check or your_option == prompt2:
-            st.markdown(suggestion_answer[0])
+            st.markdown(sd[0])
             st.markdown("10 interesting vocabularies")
-            suggestion_answer = suggestion_answer[1]
+            sd = sd[1]
         
 
-        sd = json.loads(suggestion_answer)
         print (sd)
         suggestion_df = pd.DataFrame.from_dict(sd)
         print(suggestion_df)
