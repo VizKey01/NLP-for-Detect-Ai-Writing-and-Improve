@@ -13,9 +13,6 @@ def init():
     )
     st.title('AI Text Analyzer 🤖')
 
-# def analyze_and_rewrite(api_key, user_input):
-
-
 def main():
     init()
     st.markdown('Input the writing that you want to check.')
@@ -48,15 +45,15 @@ def main():
     elif your_option == 'Auto-Corrector': your_option = prompt4
     elif your_option == 'Summarizer': your_option = prompt5
     
-    
-    client = openai.OpenAI(api_key=my_api_key)
+    # Use the openai module directly, not OpenAI class
+    openai.api_key = my_api_key
     
     if st.button('Submit') and my_api_key:
         messages_so_far = [
             {"role": "system", "content": your_option},
             {'role': 'user', 'content': user_input},
         ]
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages_so_far
         )
@@ -78,7 +75,6 @@ def main():
         suggestion_df = pd.DataFrame.from_dict(sd)
         print(suggestion_df)
         st.table(suggestion_df)
-
 
 if __name__ == "__main__":
     main()
