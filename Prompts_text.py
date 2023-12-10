@@ -1,6 +1,6 @@
 prompt1 = """Act as an AI writing tutor in English. You will receive a 
             piece of writing and you should give suggestions on how to improve it.
-            List the suggestions in a JSON array, one suggestion per line.
+            List the suggestions in a JSON array that can convert in sd = json.loads(sd) function, one suggestion per line.
             Each suggestion should have 3 fields:
             - "before" - the text before the suggestion
             - "after" - the text after the suggestion
