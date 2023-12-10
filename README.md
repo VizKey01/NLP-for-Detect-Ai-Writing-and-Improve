@@ -12,15 +12,14 @@ Run the following commands in the project directory to install the required pack
 * `source env/bin/activate`
 * `python -m pip install -r requirements.txt`
 
-Run if your pip version is not yet current.
-* `python.exe -m pip install --upgrade pip`
+Run this if your pip version is not yet current.
+`python.exe -m pip install --upgrade pip`
 
 You can see the instructions to set environment variables [here for Linux](https://phoenixnap.com/kb/linux-set-environment-variable), [here for Windows](https://phoenixnap.com/kb/windows-set-environment-variable), and [here for Mac](https://phoenixnap.com/kb/set-environment-variable-mac).
 
 ## How to run
-* Run ```streamlit run app.py ``` on local.
 
-* Run `streamlit run app.py` on local.
+Run `streamlit run app.py` on local.
 
     
 ---
