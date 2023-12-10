@@ -4,11 +4,6 @@ import pandas as pd
 import json
 from Prompts_text import prompt1, prompt2, prompt3, prompt4, prompt5
 
-# ex formatted: 
-# [ { "before": "Hello world here", "after": "Hello, everyone! I am here.",
-#  "category": "style", 
-# "comment": "Added a greeting and made the sentence more expressive." } ]
-
 def init():
     # Set up the streamlit app
     st.set_page_config(
@@ -87,6 +82,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-### Our journey through the diverse culinary landscapes of Southeast Asia, the Mediterranean, and South America has only scratched the surface of the world's gastronomic wonders. From street food stalls to elegant dining establishments, the global tapestry of flavors invites us to explore, savor, and appreciate the unique stories each dish tells. So, let your taste buds be your guide as you embark on a culinary adventure, discovering the extraordinary in the everyday delights of food.
