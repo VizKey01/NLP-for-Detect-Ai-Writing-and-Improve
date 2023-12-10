@@ -61,18 +61,20 @@ def main():
         # Show the response from the AI in a box
         st.markdown('**AI response:**')
         suggestion_answer = response.choices[0].message.content
+        #Debugging
         st.markdown("DEBUG answer:")
         st.markdown(suggestion_answer)
+        
         st.markdown("--------------------------------")
         if suggestion_answer[0] != '[':
-            st.markdown("Please Submit again.")
+            st.markdown("Sorry, Please Submit again.")
         else : 
             sd = json.loads(suggestion_answer)
         
             if check or your_option == prompt2:
                 original_answer = sd[0]
                 st.markdown(original_answer)
-                st.markdown("10 interesting vocabularies")
+                if check : st.markdown("10 interesting vocabularies")
                 sd = sd[1]
             
 
