@@ -66,7 +66,7 @@ def main():
         st.markdown(suggestion_answer)
         
         st.markdown("--------------------------------")
-        if suggestion_answer[0] != '[':
+        if suggestion_answer[0] != '[' or suggestion_answer[len(suggestion_answer)-1] != ']':
             st.markdown("Sorry, Please Submit again.")
         else : 
             sd = json.loads(suggestion_answer)
@@ -74,7 +74,7 @@ def main():
             if check or your_option == prompt2:
                 original_answer = sd[0]
                 st.markdown(original_answer)
-                if check : st.markdown("10 interesting vocabularies")
+                if check : st.markdown("Interesting Vocabulary Lists")
                 sd = sd[1]
             
 
