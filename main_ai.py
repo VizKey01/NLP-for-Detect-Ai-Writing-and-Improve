@@ -58,7 +58,7 @@ def main():
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages_so_far,
-            #temperature = 0
+            #temperature = 
         )
         # Show the response from the AI in a box
         st.markdown('**AI response:**')
@@ -70,11 +70,8 @@ def main():
         st.markdown("--------------------------------")
 
         try:
-            if suggestion_answer[0] != '[' or suggestion_answer[len(suggestion_answer)-1] != ']' or suggestion_answer[len(suggestion_answer)-2] != ']':
+            if suggestion_answer[0] != '[' or suggestion_answer[len(suggestion_answer)-1] != ']':
                 st.markdown("Sorry, Please Submit again. 1")
-                st.markdown(suggestion_answer[len(suggestion_answer)-1] != ']')
-                st.markdown(suggestion_answer[len(suggestion_answer)-3] != ']')
-
             else : 
                 sd = json.loads(suggestion_answer)
             
@@ -83,7 +80,7 @@ def main():
                     st.markdown(original_answer)
                     if check and len(sd) > 1: st.markdown("Interesting Vocabulary Lists")
                     if len(sd) > 1: sd = sd[1]
-                 
+                
                 print (sd)
                 suggestion_df = pd.DataFrame.from_dict(sd)
                 print(suggestion_df)
