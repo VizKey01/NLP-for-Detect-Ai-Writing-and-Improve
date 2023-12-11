@@ -94,7 +94,7 @@ prompt4 = """Act as an AI writing corrector, and correct the text tht you reciev
 prompt5 = """Act as an AI writing summarize, and summarize the text.
             I need two types of output:
             1. Summarize the entire text and present it as a string.
-            2. list the Identify Key points from the summarizeed text.List the Key points in a JSON array, one word per line. Only share the text generated from summary, listing each key point in a JSON array format with the fields:
+            2. you must list the Identify Key points .List the Key points in a JSON array, one word per line. Only share the text generated from the summary, listing each key point in a JSON array format with the fields:
            
             "KeyPoint" : the key point identified in the original text
             "Context" : a sentence or paragraph from the original text that illustrates the key point
