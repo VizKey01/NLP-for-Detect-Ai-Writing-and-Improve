@@ -66,22 +66,27 @@ def main():
         st.markdown(suggestion_answer)
         
         st.markdown("--------------------------------")
-        if suggestion_answer[0] != '[' or suggestion_answer[len(suggestion_answer)-1] != ']':
-            st.markdown("Sorry, Please Submit again.")
-        else : 
-            sd = json.loads(suggestion_answer)
-        
-            if check or your_option == prompt2:
-                original_answer = sd[0]
-                st.markdown(original_answer)
-                if check : st.markdown("Interesting Vocabulary Lists")
-                sd = sd[1]
-            
+        st.markdown("DEBUG answer:")
+        st.markdown(suggestion_answer)
 
-            print (sd)
-            suggestion_df = pd.DataFrame.from_dict(sd)
-            print(suggestion_df)
-            st.table(suggestion_df)
+        try:
+            if suggestion_answer[0] != '[' or suggestion_answer[len(suggestion_answer)-1] != ']':
+                st.markdown("Sorry, Please Submit again.")
+            else : 
+                sd = json.loads(suggestion_answer)
+            
+                if check or your_option == prompt2:
+                    original_answer = sd[0]
+                    st.markdown(original_answer)
+                    if check : st.markdown("Interesting Vocabulary Lists")
+                    sd = sd[1]
+                
+                print (sd)
+                suggestion_df = pd.DataFrame.from_dict(sd)
+                print(suggestion_df)
+                st.table(suggestion_df)
+        except json.JSONDecodeError:
+            st.markdown("Sorry, Please Submit again.")
 
 if __name__ == "__main__":
     main()
