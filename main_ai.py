@@ -73,7 +73,7 @@ def main():
             else : 
                 sd = json.loads(suggestion_answer)
             
-                if check or your_option == prompt2:
+                if check or your_option == prompt2 or your_option == prompt5 or your_option == prompt4:
                     original_answer = sd[0]
                     st.markdown(original_answer)
                     if check and len(sd) > 1: st.markdown("Interesting Vocabulary Lists")
