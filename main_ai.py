@@ -41,9 +41,9 @@ def main():
             index=None,
             placeholder="Select language...",
         )
+        st.write('You selected:', lang_sel)
         lang_option = languages_key[lang_sel]
         check = True
-        st.write('You selected:', lang_option)
         your_option = prompt3.format(lang_option)
     elif your_option == 'Auto-Corrector': your_option = prompt4
     elif your_option == 'Summarizer': your_option = prompt5
@@ -58,7 +58,7 @@ def main():
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages_so_far,
-            temperature=0.8,
+            #temperature = 0
         )
         # Show the response from the AI in a box
         st.markdown('**AI response:**')
