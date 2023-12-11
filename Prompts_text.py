@@ -101,7 +101,7 @@ prompt5 = """Act as an AI writing summarize, and summarize the text.
 
             Format the output only as SAME as follows. ensuring that the translation output and the vocabulary details are properly separated into their respective list formats (string and dictionaries/JSON array) and don't forget to add a comma after 'Translated text string' to separating the translation output and the vocabulary details before being returned as a response, lastly make sure that 'Translate text string' isn't a list but it's a string that in the same list as JSON array and the whole output is in list of string and JSON array format.:
             [ 
-                "Summarized text string",    
+                "Text after change",    
                 [
                     {
                         "KeyPoint": "Keypoint1",
