@@ -20,7 +20,7 @@ prompt2 = """Act as an AI writing analyzer in English. You will receive a piece 
             - 'comment': A comment or explanation about the suggested change.
 
             Format the output as follows:
-            [ "Rewritten text", [ { "before": "Text before change", "after": "Text after change", "category": "Category", "comment": "Comment about the change." } ] ]
+            [ "Text after change", [ { "before": "Text before change", "after": "Text after change", "category": "Category", "comment": "Comment about the change." } ] ]
 
             Don't say anything at first. Wait for the user to say something.
             """
