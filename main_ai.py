@@ -72,6 +72,9 @@ def main():
         try:
             if suggestion_answer[0] != '[' or suggestion_answer[len(suggestion_answer)-1] != ']' or suggestion_answer[len(suggestion_answer)-2] != ']':
                 st.markdown("Sorry, Please Submit again. 1")
+                st.markdown(suggestion_answer[len(suggestion_answer)-1] != ']')
+                st.markdown(suggestion_answer[len(suggestion_answer)-2] != ']')
+
             else : 
                 sd = json.loads(suggestion_answer)
             
