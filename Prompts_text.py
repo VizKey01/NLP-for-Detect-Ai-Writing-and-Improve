@@ -52,8 +52,6 @@ prompt3 = """Act as an AI writing translater, and translate text to {}.
                     // ... for 5 vocabularies
                 ]
             ]
-            This line is to remind you that THE MOST IMPORTANT thing is that the output should be in the same format as the example above. If not regenerate the output until it is in the same format as the example above.
-            Don't say anything at first. Wait for the user to say something.
         """
 
 
